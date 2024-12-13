@@ -9,7 +9,7 @@ namespace BeforeSRP
      * 3.Logging error to file (not ok) 
      * 
       We have to modify the class in such way to have only the responsibility for generating of
-      reports (as the name suggests). The other resposibilties should be managed from different classes*/
+      reports (as the name suggests). The other responsibilities should be managed from different classes*/
 
     public class ReportGenerator
     {
