@@ -4,9 +4,16 @@ namespace AfterSRP
 {
     public class ReportGenerator
     {
+        /*Here are used separate classes for email sending and logging of errors.
+         They are injected via constructor through interfaces. 
+         Now each class has own responsibility and the SRP principle is not violated. 
+        */
+        
         private readonly IEmailSender _emailSender;
         private readonly ILogger _logger;
 
+
+        //Here it is used dependency injection (adhering to Dependency Inversion Principle)
         public ReportGenerator(IEmailSender emailSender, ILogger logger)
         {
             _emailSender = emailSender;
